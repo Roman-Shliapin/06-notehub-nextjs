@@ -50,6 +50,8 @@ export default function NotesClient({ initialPage, initialSearch }: NotesClientP
     }
   }, [error]);
 
+  const notes = data?.notes ?? [];
+
   return (
     <div className={css.app}>
       <header className={css.toolbar}>
@@ -62,7 +64,15 @@ export default function NotesClient({ initialPage, initialSearch }: NotesClientP
         </button>
       </header>
 
-      {isLoading ? <Loading /> : <NoteList notes={data?.notes || []} />}
+      <div className={css.content}>
+        {isLoading ? (
+          <Loading />
+        ) : notes.length === 0 ? (
+          <p className={css.empty}>No notes found.</p>
+        ) : (
+          <NoteList notes={notes} />
+        )}
+      </div>
 
       <Toaster position="top-center" reverseOrder={false} />
 

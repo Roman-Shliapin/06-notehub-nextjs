@@ -17,6 +17,7 @@
   flex-direction: column;
   justify-content: space-between;
   min-height: 180px;
+  cursor: default;
 }
 
 .title {

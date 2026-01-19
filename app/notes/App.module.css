@@ -2,6 +2,9 @@
   width: min(1100px, 100%);
   margin: 0 auto;
   padding: 1.5rem 1rem 2.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .toolbar {
@@ -27,4 +30,14 @@
 
 .button:hover {
   background: #222;
+}
+
+.content {
+  flex: 1;
+  min-height: 420px;
+}
+
+.empty {
+  padding: 1.5rem 0;
+  color: rgba(0, 0, 0, 0.6);
 }

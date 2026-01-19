@@ -22,6 +22,11 @@ export default function Pagination({ pageCount, currentPage, onPageChange }: Pag
       }}
       containerClassName={css.pagination}
       pageLinkClassName={css.pageLink}
+      previousLinkClassName={css.pageLink}
+      nextLinkClassName={css.pageLink}
+      breakLinkClassName={css.pageLink}
+      disabledClassName={css.disabled}
+      disabledLinkClassName={css.disabledLink}
       activeClassName={css.active}
       activeLinkClassName={css.activeLink}
       previousLabel="←"
