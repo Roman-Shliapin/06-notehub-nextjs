@@ -1,4 +1,4 @@
-import type { NoteTag } from './NoteTag.ts';
+export type NoteTag = 'Todo' | 'Work' | 'Personal' | 'Meeting' | 'Shopping';
 
 export interface Note {
   id: string;

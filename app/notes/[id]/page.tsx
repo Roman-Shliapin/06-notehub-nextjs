@@ -4,8 +4,8 @@ import { fetchNoteById } from '@/lib/api';
 
 import NoteDetailsClient from './NoteDetails.client';
 
-export default async function NoteDetailsPage({ params }: { params: { id: string } }) {
-  const { id } = params;
+export default async function NoteDetailsPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
 
   const queryClient = new QueryClient();
 

@@ -1,7 +1,7 @@
 'use client';
 
 import { Formik, ErrorMessage, useFormikContext } from 'formik';
-import type { NoteTag } from '../../types/NoteTag';
+import type { NoteTag } from '../../types/note';
 import css from './NoteForm.module.css';
 import * as Yup from 'yup';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
